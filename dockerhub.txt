@@ -1,1 +1,4 @@
+Kriteria 3 - Repository Workflow CI:
+https://github.com/rrralsaputra/Workflow-CI
+Kriteria 3 - Docker Hub:
 https://hub.docker.com/repository/docker/muhgeralldo/heart-disease-model/general
