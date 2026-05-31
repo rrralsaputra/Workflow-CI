@@ -4,7 +4,7 @@ import pandas as pd
 import mlflow
 import mlflow.sklearn
 import matplotlib.pyplot as plt
-
+import shutil
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import (
@@ -51,7 +51,9 @@ f1 = f1_score(y_test, y_pred, average="weighted")
 
 # Folder output
 os.makedirs("artifacts", exist_ok=True)
-os.makedirs("model", exist_ok=True)
+
+if os.path.exists("model"):
+    shutil.rmtree("model"))
 
 # Simpan classification report
 report = classification_report(y_test, y_pred, output_dict=True)
