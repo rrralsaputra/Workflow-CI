@@ -24,7 +24,7 @@ jobs:
           pip install mlflow pandas numpy scikit-learn matplotlib
 
       - name: Run MLflow Project Training
-        working-directory: Workflow-CI/MLProject
+        working-directory: MLProject
         run: |
           python modelling.py
 
@@ -33,11 +33,11 @@ jobs:
         with:
           name: mlflow-model-artifacts
           path: |
-            Workflow-CI/MLProject/model
-            Workflow-CI/MLProject/artifacts
+            MLProject/model
+            MLProject/artifacts
 
       - name: Build Docker Image with MLflow
-        working-directory: Workflow-CI/MLProject
+        working-directory: MLProject
         run: |
           mlflow models build-docker -m model -n heart-disease-model
 
