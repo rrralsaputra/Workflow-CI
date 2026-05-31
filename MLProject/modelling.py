@@ -53,7 +53,7 @@ f1 = f1_score(y_test, y_pred, average="weighted")
 os.makedirs("artifacts", exist_ok=True)
 
 if os.path.exists("model"):
-    shutil.rmtree("model"))
+    shutil.rmtree("model")
 
 # Simpan classification report
 report = classification_report(y_test, y_pred, output_dict=True)
